@@ -106,7 +106,6 @@ galleryElement.style.marginTop = '100px';
 galleryElement.style.maxWidth = '1128px';
 
 const galleryImages = document.querySelectorAll('.gallery-image');
-
 galleryImages.forEach(image => {
   image.style.height = '200px';
 });
