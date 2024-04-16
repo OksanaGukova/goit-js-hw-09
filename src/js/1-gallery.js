@@ -89,23 +89,3 @@ const lightbox = new SimpleLightbox('.gallery a', {
   captionsData: "alt", 
   captionsDelay: 250, 
 });
-
-
-const galleryElement = document.querySelector('.gallery');
-
-galleryElement.style.display = 'flex';
-galleryElement.style.flexDirection = 'row';
-galleryElement.style.flexWrap = 'wrap';
-galleryElement.style.gap = '24px';
-galleryElement.style.padding = '0';
-galleryElement.style.listStyle = 'none';
-galleryElement.style.marginLeft = 'auto';
-galleryElement.style.marginRight = 'auto';
-galleryElement.style.justifyContent = 'center';
-galleryElement.style.marginTop = '100px';
-galleryElement.style.maxWidth = '1128px';
-
-const galleryImages = document.querySelectorAll('.gallery-image');
-galleryImages.forEach(image => {
-  image.style.height = '200px';
-});
