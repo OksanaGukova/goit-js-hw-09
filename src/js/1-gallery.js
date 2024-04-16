@@ -69,12 +69,13 @@ import "simplelightbox/dist/simple-lightbox.min.css";
 
 
 const galleryList = document.querySelector(".gallery");
-const galleryListItem = getImgItem(images);
+ const galleryListItem = getImgItem(images); 
 galleryList.insertAdjacentHTML('beforeend', galleryListItem);  
     
-   function getImgItem() {
-       return images.map(({ preview, original, description }) => {
-          return  `<li class="gallery-item">
+
+  function getImgItem() {
+  return images.reduce((acc, { preview, original, description }) =>
+  (acc += `<li class="gallery-item">
   <a class="gallery-link" href=${original}>
     <img
       class="gallery-image"
@@ -82,10 +83,13 @@ galleryList.insertAdjacentHTML('beforeend', galleryListItem);
       alt=${description}
     />
   </a>
-</li>`}).join('');
-} 
-   
+</li>` ), '')
+}
+
 const lightbox = new SimpleLightbox('.gallery a', {
   captionsData: "alt", 
   captionsDelay: 250, 
 });
+
+
+
