@@ -63,9 +63,50 @@ border: none;
     max-width: 1128px;
 }
 
-
-
 .gallery-image {
-    
     height: 200px;
+}
+
+.feedback-form{
+  display: flex;
+  flex-direction: column;
+
+}
+
+.feedback-form input {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 360px;
+  height: 40px;
+    padding: 5px;
+}
+
+.feedback-form textarea {
+  display: flex;
+  flex-direction: column;
+    gap: 8px;
+  resize: none;
+  margin-bottom: 16px;
+  width: 360px;
+  padding: 5px;
+}
+
+.feedback-form button {
+font-weight: 500;
+font-size: 16px;
+line-height: 1.5;
+letter-spacing: 0.04em;
+color: #fff;
+background: #4e75ff;
+border-radius: 8px;
+padding: 8px 16px;
+width: 95px;
+height: 40px;
+border: none;
+padding: 8px;
+}
+
+.feedback-form button:hover {
+  background: #6c8cff;
 }
